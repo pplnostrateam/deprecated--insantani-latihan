@@ -13,9 +13,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mTextView = (TextView) findViewById(R.id.TitleTextView);
-
         mTextView.setText("Insantani aja");
     }
 }
