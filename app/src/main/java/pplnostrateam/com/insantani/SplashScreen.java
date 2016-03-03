@@ -27,28 +27,21 @@ public class SplashScreen extends AppCompatActivity {
         final SplashScreen sPlashScreen = this;
 
         // The thread to wait for splash screen events
-        mSplashThread =  new Thread(){
-            @Override
-            public void run(){
-                try {
-                    synchronized(this){
-                        // Wait given period of time or exit on touch
-                        wait(5000);
+        mSplashThread =  new Thread() {
+            public void run() {
+                try{
+                    synchronized (this) {
+                        wait(12000);
                     }
-                }
-                catch(InterruptedException ex){
-                }
+                } catch(InterruptedException e) {
+                    e.printStackTrace();
+                } finally {
+                    Intent openStartingPoint = new Intent(SplashScreen.this, MainActivity.class);
+                    startActivity(openStartingPoint);
 
-                finish();
-
-                // Run next activity
-                Intent intent = new Intent();
-                intent.setClass(sPlashScreen, MainActivity.class);
-                startActivity(intent);
-                stop();
+                }
             }
         };
-
         mSplashThread.start();
     }
 
