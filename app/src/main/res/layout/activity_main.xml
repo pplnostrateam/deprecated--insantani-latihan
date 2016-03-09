@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="pplnostrateam.com.insantani.MainActivity">
+    tools:context=".UI.MainActivity">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -22,18 +22,18 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/searchTextView"
+            android:id="@+id/searchVegetableText"
             android:layout_weight="95"
             android:hint="Search...."
             android:textSize="20dp"
-            android:text="Search vegetable..." />
+            />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="go"
-            android:id="@+id/searchButton"
+            android:id="@+id/searchVegetableButton"
             android:layout_weight="5" />
     </LinearLayout>
 

@@ -1,0 +1,39 @@
+package pplnostrateam.com.insantani.UI;
+
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import butterknife.Bind;
+import pplnostrateam.com.insantani.R;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Bind(R.id.searchVegetableText) private TextView mTextView;
+    @Bind(R.id.searchVegetableButton) private Button searchButton;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        searchButton.setOnClickListener(
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startSearch(mTextView.getText().toString());
+                }
+            }
+        );
+    }
+
+    protected void startSearch(String query) {
+        Intent intent = new Intent(this, SearchResultActivity.class);
+        intent.putExtra("query",query);
+        startActivity(intent);
+    }
+}

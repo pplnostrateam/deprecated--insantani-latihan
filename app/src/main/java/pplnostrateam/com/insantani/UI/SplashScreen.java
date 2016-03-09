@@ -1,10 +1,11 @@
-package pplnostrateam.com.insantani;
+package pplnostrateam.com.insantani.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
+
+import pplnostrateam.com.insantani.R;
 
 /**
  * Created by Adrian on 2/25/2016.
