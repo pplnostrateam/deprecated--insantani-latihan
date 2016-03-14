@@ -6,29 +6,32 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import pplnostrateam.com.insantani.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Bind(R.id.searchVegetableText) private TextView mTextView;
-    @Bind(R.id.searchVegetableButton) private Button searchButton;
+    @Bind(R.id.searchVegetableText) TextView mTextView;
+    @Bind(R.id.searchVegetableButton) Button mSearchButton;
+
+    @OnClick(R.id.searchVegetableButton) void onClick() {
+        Toast.makeText(this, "Clicked!", Toast.LENGTH_SHORT).show();
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
-        searchButton.setOnClickListener(
-            new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    startSearch(mTextView.getText().toString());
-                }
-            }
-        );
+
     }
 
     protected void startSearch(String query) {
