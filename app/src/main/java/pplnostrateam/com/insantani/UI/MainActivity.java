@@ -12,6 +12,7 @@ import org.w3c.dom.Text;
 import butterknife.Bind;
 import pplnostrateam.com.insantani.R;
 
+//untuk commit
 public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.searchVegetableText) TextView mTextView;
