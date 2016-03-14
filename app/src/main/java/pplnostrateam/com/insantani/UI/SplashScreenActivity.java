@@ -10,7 +10,7 @@ import pplnostrateam.com.insantani.R;
 /**
  * Created by Adrian on 2/25/2016.
  */
-public class SplashScreen extends AppCompatActivity {
+public class SplashScreenActivity extends AppCompatActivity {
 
     /**
      * The thread to process splash screen events
@@ -25,7 +25,7 @@ public class SplashScreen extends AppCompatActivity {
         // Splash screen view
         setContentView(R.layout.splash_screen);
 
-        final SplashScreen sPlashScreen = this;
+        final SplashScreenActivity sPlashScreen = this;
 
         // The thread to wait for splash screen events
         mSplashThread =  new Thread() {
@@ -37,7 +37,7 @@ public class SplashScreen extends AppCompatActivity {
                 } catch(InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    Intent openStartingPoint = new Intent(SplashScreen.this, MainActivity.class);
+                    Intent openStartingPoint = new Intent(SplashScreenActivity.this, MainActivity.class);
                     startActivity(openStartingPoint);
 
                 }

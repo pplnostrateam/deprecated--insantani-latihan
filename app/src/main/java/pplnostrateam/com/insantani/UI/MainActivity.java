@@ -14,21 +14,21 @@ import pplnostrateam.com.insantani.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Bind(R.id.searchVegetableText) private TextView mTextView;
-    @Bind(R.id.searchVegetableButton) private Button searchButton;
+    @Bind(R.id.searchVegetableText) TextView mTextView;
+    @Bind(R.id.searchVegetableButton) Button searchButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        searchButton.setOnClickListener(
+/*        searchButton.setOnClickListener(
             new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    startSearch(mTextView.getText().toString());
+    //                startSearch(mTextView.getText().toString());
                 }
             }
-        );
+        );*/
     }
 
     protected void startSearch(String query) {
