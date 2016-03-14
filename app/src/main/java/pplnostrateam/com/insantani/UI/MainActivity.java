@@ -10,6 +10,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 import pplnostrateam.com.insantani.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,15 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-/*        searchButton.setOnClickListener(
-            new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-    //                startSearch(mTextView.getText().toString());
-                }
-            }
-        );*/
+        ButterKnife.bind(this);
     }
 
     protected void startSearch(String query) {
