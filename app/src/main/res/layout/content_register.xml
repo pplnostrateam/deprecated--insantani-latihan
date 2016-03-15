@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="pplnostrateam.com.insantani.Model.Register"
+    tools:context=".UI.Register"
     tools:showIn="@layout/activity_register">
 
     <TextView
@@ -61,17 +61,22 @@
         android:layout_marginBottom="10dp"
         android:inputType="textPassword"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Repeat"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etRepeat"
+        android:layout_marginBottom="10dp"
+        android:inputType="textPassword"/>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bRegister"
         android:text="Register"/>
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvRegisterLink"
-        android:text="Register Here"
-        android:layout_gravity="center_horizontal"
-        android:textStyle="bold" />
+
 </LinearLayout>

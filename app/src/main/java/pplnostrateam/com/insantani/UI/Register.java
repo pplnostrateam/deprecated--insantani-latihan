@@ -1,4 +1,4 @@
-package pplnostrateam.com.insantani.Model;
+package pplnostrateam.com.insantani.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import pplnostrateam.com.insantani.Model.User;
 import pplnostrateam.com.insantani.R;
 import pplnostrateam.com.insantani.UI.MainActivity;
 
@@ -25,15 +26,6 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         etName = (EditText) findViewById(R.id.etName);
         etPhone = (EditText) findViewById(R.id.etPhone);
         etUsername = (EditText) findViewById(R.id.etUsername);
@@ -47,7 +39,15 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bRegister:
-                startActivity(new Intent(this, MainActivity.class));
+
+                String name = etName.getText().toString();
+                String phone = etPhone.getText().toString();
+                String username = etUsername.getText().toString();
+                String password = etPassword.getText().toString();
+
+                User registeredUser = new User(name, phone, username, password);
+
+                //startActivity(new Intent(this, MainActivity.class));
                 break;
         }
     }

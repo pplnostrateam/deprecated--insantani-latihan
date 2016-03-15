@@ -21,11 +21,11 @@
             android:label="@string/title_activity_search_result"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Model.Login"
+            android:name=".UI.Login"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Model.Register"
+            android:name=".UI.Register"
             android:label="@string/title_activity_register"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

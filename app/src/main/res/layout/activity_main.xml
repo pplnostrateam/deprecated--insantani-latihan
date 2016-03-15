@@ -63,6 +63,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
 
+
+
     </LinearLayout>
 
     <Button
@@ -76,4 +78,13 @@
         android:textColor="#ffffff"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvLoginLink"
+        android:text="Login"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold" />
+
 </RelativeLayout>

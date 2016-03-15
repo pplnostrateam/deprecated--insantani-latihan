@@ -1,4 +1,4 @@
-package pplnostrateam.com.insantani.Model;
+package pplnostrateam.com.insantani.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import pplnostrateam.com.insantani.R;
 import pplnostrateam.com.insantani.UI.MainActivity;
+import pplnostrateam.com.insantani.UI.Register;
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,15 +27,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         etUsername = (EditText) findViewById(R.id.etUsername);
         etPassword = (EditText) findViewById(R.id.etPassword);
