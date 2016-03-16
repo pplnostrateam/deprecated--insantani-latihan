@@ -5,7 +5,7 @@ package pplnostrateam.com.insantani.Model;
  */
 public class User {
 
-    String name, username, password, phone;
+    public String name, username, password, phone;
 
     public User (String name, String username, String password, String phone){
         this.name = name;
