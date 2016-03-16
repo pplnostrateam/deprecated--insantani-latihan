@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">Insantani</string>
     <string name="title_activity_search_result">SearchResultActivity</string>
+
+    <string-array name="Vegetables">
+        <item> Baby Carrot</item>
+        <item> Common Carrot </item>
+        <item> Rare Carrot</item>
+        <item> Mythical Carrot</item>
+        <item> Urban Carrot</item>
+        <item> Organic Carrot </item>
+        <item> Plain Carrot</item>
+        <item> Jack Carrot</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
