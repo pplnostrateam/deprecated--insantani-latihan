@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.tvLoginLink)
     void loginTextView(View view) {
         if (view.getId() == R.id.tvLoginLink) {
-            login.setText("Logout");
             startActivity(new Intent(this, Login.class));
         }
     }

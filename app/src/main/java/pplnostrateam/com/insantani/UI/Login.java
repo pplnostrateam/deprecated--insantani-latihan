@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import pplnostrateam.com.insantani.Model.User;
+import pplnostrateam.com.insantani.Model.UserLocalStore;
 import pplnostrateam.com.insantani.R;
 import pplnostrateam.com.insantani.UI.MainActivity;
 import pplnostrateam.com.insantani.UI.Register;
@@ -20,6 +22,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     Button bLogin;
     EditText etUsername, etPassword;
     TextView tvRegisterLink;
+    UserLocalStore userLocalStore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +38,22 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         bLogin.setOnClickListener(this);
         tvRegisterLink.setOnClickListener(this);
+
+        userLocalStore = new UserLocalStore(this);
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bLogin:
-                startActivity(new Intent(this, MainActivity.class));
+                User user = new User(null, null);
+
+                userLocalStore.storeUserData(user);
+                userLocalStore.setUserLoggedIn(true);
+
+
+                startActivity(new Intent(this, UserProfile.class));
                 break;
 
             case R.id.tvRegisterLink:

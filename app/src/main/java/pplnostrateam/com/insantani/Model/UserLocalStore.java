@@ -23,7 +23,7 @@ public class UserLocalStore {
         spEditor.commit();
     }
 
-    public User getUserLoggedIn(boolean loggedIn) {
+    public User getLoggedInUser() {
         String name = userLocalDatabase.getString("name", "");
         String phone = userLocalDatabase.getString("phone", "");
         String username = userLocalDatabase.getString("username", "");
@@ -38,6 +38,14 @@ public class UserLocalStore {
         SharedPreferences.Editor spEditor = userLocalDatabase.edit();
         spEditor.putBoolean("loggedIn", loggedIn);
         spEditor.commit();
+    }
+
+    public boolean getUserLoggedIn() {
+        if(userLocalDatabase.getBoolean("loggedIn", false)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public void clearUserData() {
