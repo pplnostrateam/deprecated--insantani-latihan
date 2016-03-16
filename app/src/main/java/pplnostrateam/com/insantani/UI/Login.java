@@ -31,6 +31,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         etUsername = (EditText) findViewById(R.id.etUsername);
         etPassword = (EditText) findViewById(R.id.etPassword);
         bLogin = (Button) findViewById(R.id.bLogin);
+        tvRegisterLink = (TextView) findViewById(R.id.tvRegisterLink);
 
         bLogin.setOnClickListener(this);
         tvRegisterLink.setOnClickListener(this);
@@ -48,6 +49,4 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 break;
         }
     }
-
-
 }

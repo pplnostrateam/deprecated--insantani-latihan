@@ -85,6 +85,6 @@
         android:id="@+id/tvLoginLink"
         android:text="Login"
         android:layout_gravity="center_horizontal"
-        android:textStyle="bold" />
-
+        android:textStyle="bold"
+        android:onClick="loginTextView"/>
 </RelativeLayout>

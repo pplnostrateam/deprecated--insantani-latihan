@@ -47,7 +47,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
                 User registeredUser = new User(name, phone, username, password);
 
-                //startActivity(new Intent(this, MainActivity.class));
+                startActivity(new Intent(this, MainActivity.class));
                 break;
         }
     }
