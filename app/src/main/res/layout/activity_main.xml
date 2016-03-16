@@ -62,22 +62,7 @@
         android:layout_marginBottom="137dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
-
-
-
     </LinearLayout>
-
-    <Button
-        android:layout_width="181dp"
-        android:layout_height="69dp"
-        android:text="ADD TO CART"
-        android:id="@+id/addtocartButton"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20dp"
-        android:backgroundTint="#009688"
-        android:textColor="#ffffff"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:layout_width="wrap_content"

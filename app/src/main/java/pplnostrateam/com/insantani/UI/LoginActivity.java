@@ -17,7 +17,7 @@ import pplnostrateam.com.insantani.R;
 import pplnostrateam.com.insantani.UI.MainActivity;
 import pplnostrateam.com.insantani.UI.Register;
 
-public class Login extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button bLogin;
     EditText etUsername, etPassword;
