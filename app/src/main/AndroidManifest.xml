@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="pplnostrateam.com.insantani"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pplnostrateam.com.insantani">
 
     <application
         android:allowBackup="true"
@@ -10,20 +10,31 @@
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".UI.SplashScreenActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.MainActivity">
-        </activity>
+        <activity android:name=".UI.MainActivity" />
         <activity
             android:name=".UI.SearchResultActivity"
             android:label="@string/title_activity_search_result"
+<<<<<<< HEAD
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".UI.CartListFragment">
         </activity>
+=======
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.Login"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UI.Register"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+>>>>>>> b4491e53b97324cb5415cd5fc107f17d25a2ee0c
     </application>
 
 </manifest>
