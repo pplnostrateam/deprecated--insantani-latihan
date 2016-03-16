@@ -3,5 +3,13 @@
     <string name="title_activity_search_result">SearchResultActivity</string>
     <string name="title_activity_login">Login</string>
     <string name="title_activity_register">Register</string>
+<<<<<<< HEAD
     <string name="title_activity_user_profile">UserProfile</string>
+=======
+<<<<<<< HEAD
+    <string name="title_activity_user_profile">UserProfile</string>
+=======
+
+>>>>>>> cb7cd8063f09afca09972554720009a25b7bba5a
+>>>>>>> 2a1e1abf86603759027df32c141c0bf89eb6245a
 </resources>

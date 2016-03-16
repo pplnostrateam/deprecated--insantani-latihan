@@ -57,7 +57,7 @@ public class UserProfile extends AppCompatActivity implements View.OnClickListen
 
                 userLocalStore.clearUserData();
                 userLocalStore.setUserLoggedIn(false);
-                startActivity(new Intent(this, Login.class));
+                startActivity(new Intent(this, LoginActivity.class));
                 break;
         }
     }
