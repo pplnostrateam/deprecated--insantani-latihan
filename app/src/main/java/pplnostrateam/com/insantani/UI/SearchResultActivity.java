@@ -2,39 +2,48 @@ package pplnostrateam.com.insantani.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import pplnostrateam.com.insantani.R;
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import pplnostrateam.com.insantani.Model.VegetableSearch;
+import pplnostrateam.com.insantani.R;
 
 public class SearchResultActivity extends AppCompatActivity {
+
+    FragmentManager fragmentManager = this.getSupportFragmentManager();
+    FragmentTransaction fragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result);
-<<<<<<< HEAD
+        ButterKnife.bind(this);
         Intent intent = getIntent();
         String message = intent.getStringExtra("query");
-        Toast.makeText(this, "Search Result Activity started " + message, Toast.LENGTH_SHORT ).show();
-
-        /*
         Bundle bundle=new Bundle();
-        bundle.putString(message, "query");
+        bundle.putString("query", message);
         //set Fragmentclass Arguments
-        CartListFragment fragment=new CartListFragment();
+        Fragment fragment= (Fragment)new CartListFragment();
         fragment.setArguments(bundle);
-        */
-=======
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
->>>>>>> b4491e53b97324cb5415cd5fc107f17d25a2ee0c
+        FragmentManager fragmentManager = this.getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_frame, fragment);
+        fragmentTransaction.commit();
+        Toast.makeText(this, "Show cart", Toast.LENGTH_SHORT).show();
+
+
     }
 
     private VegetableSearch parseJSONDetail() {
         VegetableSearch mVegetable = new VegetableSearch();
         return mVegetable;
     }
+
 }

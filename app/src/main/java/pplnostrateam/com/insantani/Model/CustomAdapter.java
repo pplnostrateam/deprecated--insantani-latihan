@@ -1,34 +1,60 @@
 package pplnostrateam.com.insantani.Model;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.app.Activity;
+import android.widget.Toast;
+
 import java.util.List;
 
 import pplnostrateam.com.insantani.R;
+import pplnostrateam.com.insantani.UI.CartListFragment;
 
 /**
  * Created by Adrian on 3/15/2016.
  */
-public class CustomAdapter extends ArrayAdapter {
+public class CustomAdapter extends BaseAdapter {
 
     private Context context;
     private boolean useList = true;
+    private List<Vegetable> items;
+
 
     public CustomAdapter(Context context, List items) {
-        super(context, android.R.layout.simple_list_item_1, items);
         this.context = context;
+        this.items = items;
+        Log.d("items ",items.size()+"");
     }
 
     /*
      * Holder for the list items
      */
      private class ViewHolder {
-        TextView titleText;
+        RadioButton mRadioButton;
+        EditText mEditText;
+    }
+
+    @Override
+    public int getCount() {
+        return items.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return items.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
     }
 
     /**
@@ -39,32 +65,20 @@ public class CustomAdapter extends ArrayAdapter {
      * @return
      */
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder = null;
+        ViewHolder holder = new ViewHolder();
+        View viewToUse;
         Vegetable item = (Vegetable)getItem(position);
-        View viewToUse = null;
 
-        // This block exists to inflate the settings list item conditionally based on whether
-        // we want to support a grid or list view.
         LayoutInflater mInflater = (LayoutInflater) context
                 .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-        if (convertView == null) {
-            if(useList){
-                viewToUse = mInflater.inflate(android.R.layout.simple_list_item_1, null);
-            } else {
-                viewToUse = mInflater.inflate(android.R.layout.simple_list_item_2, null);
-            }
 
-            holder = new ViewHolder();
-            holder.titleText = (TextView)viewToUse.findViewById(R.id.titleTextView);
-            viewToUse.setTag(holder);
-        } else {
-            viewToUse = convertView;
-            holder = (ViewHolder) viewToUse.getTag();
-        }
+        viewToUse = mInflater.inflate(R.layout.simple_list_item_3, null);
 
-        holder.titleText.setText(item.getName());
+        holder.mEditText = (EditText)viewToUse.findViewById(R.id.cartTitleTextView);
+        holder.mRadioButton = (RadioButton)viewToUse.findViewById(R.id.cartRadioButton);
+        holder.mRadioButton.setText(items.get(position).getName());
+
         return viewToUse;
     }
-
 
 }
