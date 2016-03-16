@@ -1,11 +1,10 @@
 package pplnostrateam.com.insantani.UI;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.util.Log;
+import android.widget.Toast;
 
 import pplnostrateam.com.insantani.R;
 import pplnostrateam.com.insantani.Model.VegetableSearch;
@@ -16,22 +15,21 @@ public class SearchResultActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("query");
+        Toast.makeText(this, "Search Result Activity started " + message, Toast.LENGTH_SHORT ).show();
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        /*
+        Bundle bundle=new Bundle();
+        bundle.putString(message, "query");
+        //set Fragmentclass Arguments
+        CartListFragment fragment=new CartListFragment();
+        fragment.setArguments(bundle);
+        */
     }
 
     private VegetableSearch parseJSONDetail() {
         VegetableSearch mVegetable = new VegetableSearch();
-
         return mVegetable;
     }
 }

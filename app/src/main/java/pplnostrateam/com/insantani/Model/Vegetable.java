@@ -7,12 +7,24 @@ public class Vegetable {
 
     private String mName;
     private long mRate;
-    private long mPrice;
+    private int mPrice;
 
-    public Vegetable(String name, long rate, long price) {
+    public Vegetable(String name, long rate, int price) {
         mName = name;
         mRate = rate;
         mPrice = price;
+    }
+
+    public Vegetable(String name) {
+        this.mName = name;
+        this.mRate = 0;
+        this.mPrice = 10000;
+    }
+
+    public Vegetable(String s, int i) {
+        this.mName = s;
+        this.mRate = 0;
+        this.mPrice = i;
     }
 
     public String getName() {
@@ -35,7 +47,7 @@ public class Vegetable {
         return mPrice;
     }
 
-    public void setPrice(long price) {
+    public void setPrice(int price) {
         mPrice = price;
     }
 

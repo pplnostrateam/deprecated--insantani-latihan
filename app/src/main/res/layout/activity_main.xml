@@ -28,52 +28,28 @@
             android:textSize="20dp"
             />
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="go"
-            android:id="@+id/searchVegetableButton"
-            android:layout_weight="5" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignParentLeft="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Search Result"
-            android:id="@+id/resultHeader"
-            android:textSize="33dp"
-            android:textColor="#009688" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="137dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
     </LinearLayout>
 
     <Button
         android:layout_width="181dp"
         android:layout_height="69dp"
-        android:text="ADD TO CART"
-        android:id="@+id/addtocartButton"
+        android:text="Search"
+        android:id="@+id/homeButton"
         android:layout_gravity="center_horizontal"
         android:textSize="20dp"
         android:backgroundTint="#009688"
         android:textColor="#ffffff"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Insantani"
+        android:id="@+id/textView6"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="68dp"/>
+
 </RelativeLayout>
