@@ -18,9 +18,10 @@ import pplnostrateam.com.insantani.R;
 public class MainActivity extends AppCompatActivity {
 
     @Bind(R.id.searchVegetableText) TextView mTextView;
+    /*
     @OnClick(R.id.homeButton) void onClick() {
         startSearch(mTextView.getText().toString());
-    }
+    }*/
     @Bind(R.id.searchVegetableButton) Button searchButton;
     @Bind(R.id.tvLoginLink) TextView login;
 
