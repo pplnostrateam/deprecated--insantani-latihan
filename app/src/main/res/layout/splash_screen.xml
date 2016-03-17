@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-    android:clickable="false"
-    android:background="#4CAF50">
+              android:layout_height="match_parent">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="INSANTANI"
+        android:textSize="40dp"
+        android:textColor="#009688"
         android:id="@+id/textView3"
+        android:layout_above="@+id/textView4"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Fresh Vegetables Delivery"
+        android:id="@+id/textView4"
+        android:textColor="#212121"
+        android:textSize="23dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:autoText="true"
-        android:textSize="48dp" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>
