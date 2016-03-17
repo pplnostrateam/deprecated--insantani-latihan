@@ -5,17 +5,17 @@ package pplnostrateam.com.insantani.Model;
  */
 public class User {
 
-    public String name, username, password, phone;
+    public String name, email, password, phone;
 
-    public User (String name, String username, String password, String phone){
+    public User (String name, String email, String password, String phone){
         this.name = name;
         this.phone = phone;
-        this.username = username;
+        this.email = email;
         this.password = password;
     }
 
-    public User (String username, String password) {
-        this.username = username;
+    public User (String email, String password) {
+        this.email = email;
         this.password = password;
         this.name = "";
         this.phone = "";

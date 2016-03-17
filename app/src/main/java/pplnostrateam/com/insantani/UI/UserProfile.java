@@ -22,7 +22,7 @@ import pplnostrateam.com.insantani.R;
 public class UserProfile extends AppCompatActivity implements View.OnClickListener {
 
     Button bLogout;
-    EditText etName, etPhone, etUsername;
+    EditText etName, etPhone, etEmail;
     UserLocalStore userLocalStore;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -39,7 +39,7 @@ public class UserProfile extends AppCompatActivity implements View.OnClickListen
 
         etName = (EditText) findViewById(R.id.etName);
         etPhone = (EditText) findViewById(R.id.etPhone);
-        etUsername = (EditText) findViewById(R.id.etUsername);
+        etEmail = (EditText) findViewById(R.id.etEmail);
 
         bLogout = (Button) findViewById(R.id.bLogout);
         bLogout.setOnClickListener(this);
@@ -116,7 +116,7 @@ public class UserProfile extends AppCompatActivity implements View.OnClickListen
     private void displayUserDetails() {
 
         User user = userLocalStore.getLoggedInUser();
-        etUsername.setText(user.username);
+        etEmail.setText(user.email);
         etName.setText(user.name);
         etPhone.setText(user.phone);
     }

@@ -17,7 +17,7 @@ import pplnostrateam.com.insantani.UI.MainActivity;
 public class Register extends AppCompatActivity implements View.OnClickListener {
 
     Button bRegister;
-    EditText etName, etPhone, etUsername, etPassword;
+    EditText etName, etPhone, etEmail, etPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
         etName = (EditText) findViewById(R.id.etName);
         etPhone = (EditText) findViewById(R.id.etPhone);
-        etUsername = (EditText) findViewById(R.id.etUsername);
+        etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
         bRegister = (Button) findViewById(R.id.bRegister);
 
@@ -42,10 +42,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
 
                 String name = etName.getText().toString();
                 String phone = etPhone.getText().toString();
-                String username = etUsername.getText().toString();
+                String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
 
-                User registeredUser = new User(name, phone, username, password);
+                User registeredUser = new User(name, phone, email, password);
 
                 startActivity(new Intent(this, MainActivity.class));
                 break;

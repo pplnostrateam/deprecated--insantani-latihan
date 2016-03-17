@@ -20,7 +20,7 @@ import pplnostrateam.com.insantani.UI.Register;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button bLogin;
-    EditText etUsername, etPassword;
+    EditText etEmail, etPassword;
     TextView tvRegisterLink;
     UserLocalStore userLocalStore;
 
@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        etUsername = (EditText) findViewById(R.id.etUsername);
+        etEmail = (EditText) findViewById(R.id.etEmail);
         etPassword = (EditText) findViewById(R.id.etPassword);
         bLogin = (Button) findViewById(R.id.bLogin);
         tvRegisterLink = (TextView) findViewById(R.id.tvRegisterLink);
