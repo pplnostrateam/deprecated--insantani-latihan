@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".UI.MainActivity">
+    tools:context="pplnostrateam.com.insantani.MainActivity">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -22,18 +22,23 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/searchVegetableText"
+            android:id="@+id/searchTextView"
             android:layout_weight="95"
             android:hint="Search...."
             android:textSize="20dp"
-            />
+            android:padding="10dp"
+            android:background="#FFFFFF"
+            android:text="Search vegetable..." />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="go"
-            android:id="@+id/searchVegetableButton"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:id="@+id/searchButton"
+            android:background="#303F9F"
             android:layout_weight="5" />
     </LinearLayout>
 
@@ -62,15 +67,18 @@
         android:layout_marginBottom="137dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
+
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvLoginLink"
-        android:text="Login"
+    <Button
+        android:layout_width="181dp"
+        android:layout_height="69dp"
+        android:text="ADD TO CART"
+        android:id="@+id/addtocartButton"
         android:layout_gravity="center_horizontal"
-        android:textStyle="bold"
-        android:onClick="loginTextView"/>
-
+        android:textSize="20dp"
+        android:backgroundTint="#009688"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
