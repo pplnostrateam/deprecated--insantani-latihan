@@ -2,7 +2,6 @@
 Application for Project in Software Project Course
 Include butterknife in gradle/maven
 
-Team Name 	: Insantani
 Team Member :
 * Hustler :
   - Aghny Arisya Putra
