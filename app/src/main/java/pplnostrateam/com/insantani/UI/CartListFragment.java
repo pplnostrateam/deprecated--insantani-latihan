@@ -1,6 +1,5 @@
 package pplnostrateam.com.insantani.UI;
 
-import android.app.ListFragment;
 import android.content.Intent;
 import android.provider.Telephony;
 import android.support.v4.app.Fragment;
@@ -15,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -36,6 +36,10 @@ public class CartListFragment extends Fragment  {
     private List vegetableItemList;
     private CustomAdapter mAdapter;
 
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -51,9 +55,10 @@ public class CartListFragment extends Fragment  {
         vegetableItemList.add(new Vegetable("Mythical " + name, 10000));
         vegetableItemList.add(new Vegetable("Green " + name, 10000));
 
-        mAdapter = new CustomAdapter(getActivity(), vegetableItemList);
-        ListView cartList = (ListView) view.findViewById(R.id.cartList);
-        cartList.setAdapter(mAdapter);
+       // mAdapter = new CustomAdapter(getActivity(), vegetableItemList);
+     //   ListView cartList = (ListView) view.findViewById(R.id.cartList);
+       // cartList.setAdapter(mAdapter);
+
         return view;
 
     }
@@ -69,4 +74,5 @@ public class CartListFragment extends Fragment  {
         Toast.makeText(getActivity(), "Added to cart", Toast.LENGTH_LONG).show();
         this.getFragmentManager().beginTransaction().remove(this);
     }
+
 }

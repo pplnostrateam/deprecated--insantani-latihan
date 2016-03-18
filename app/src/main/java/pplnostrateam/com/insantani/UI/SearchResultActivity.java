@@ -6,19 +6,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.FrameLayout;
 import android.widget.Toast;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 import pplnostrateam.com.insantani.Model.VegetableSearch;
 import pplnostrateam.com.insantani.R;
 
 public class SearchResultActivity extends AppCompatActivity {
 
-    FragmentManager fragmentManager = this.getSupportFragmentManager();
-    FragmentTransaction fragmentTransaction;
+    FragmentManager mFragmentManager = this.getSupportFragmentManager();
+    FragmentTransaction mFragmentTransaction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +30,9 @@ public class SearchResultActivity extends AppCompatActivity {
         Fragment fragment= (Fragment)new CartListFragment();
         fragment.setArguments(bundle);
         FragmentManager fragmentManager = this.getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.replace(R.id.fragment_frame, fragment);
-        fragmentTransaction.commit();
+        mFragmentTransaction = fragmentManager.beginTransaction();
+        mFragmentTransaction.replace(R.id.fragment_frame, fragment);
+        mFragmentTransaction.commit();
         Toast.makeText(this, "Show cart", Toast.LENGTH_SHORT).show();
 
 
