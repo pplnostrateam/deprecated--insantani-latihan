@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SIGN UP"
+        android:textSize="35dp"
+        android:textColor="#009688"
+        android:id="@+id/textView6"
+        android:layout_marginTop="71dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/userEditText"
+        android:background="#FFFFFF"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:text="Full Name"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/addtocartButton"
+        android:layout_alignStart="@+id/addtocartButton"
+        android:layout_alignRight="@+id/addtocartButton"
+        android:layout_alignEnd="@+id/addtocartButton" />
+
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="69dp"
+        android:text="SIGN UP"
+        android:id="@+id/addtocartButton"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:backgroundTint="#009688"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:background="#FFFFFF"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_below="@+id/userEditText"
+        android:layout_alignLeft="@+id/userEditText"
+        android:layout_alignStart="@+id/userEditText"
+        android:layout_alignRight="@+id/userEditText"
+        android:layout_alignEnd="@+id/userEditText"
+        android:text="email" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:background="#FFFFFF"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:text="Phone Number"
+        android:layout_below="@+id/editText"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText3"
+        android:background="#FFFFFF"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:text="Password "
+        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/editText2"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_alignEnd="@+id/editText2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editText4"
+        android:background="#FFFFFF"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:text="Cofirm Password "
+        android:layout_below="@+id/editText3"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignRight="@+id/editText3"
+        android:layout_alignEnd="@+id/editText3" />
+
+
+</RelativeLayout>
