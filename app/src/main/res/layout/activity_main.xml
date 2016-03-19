@@ -28,13 +28,13 @@
             android:textSize="20dp"
             android:padding="10dp"
             android:background="#FFFFFF"
-            android:text="Search vegetable..." />
+            android:text="Cari oang gblok" />
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="go"
+            android:text="goblok"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:id="@+id/searchButton"
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Search Result"
+            android:text="Kampret Result"
             android:id="@+id/resultHeader"
             android:textSize="33dp"
             android:textColor="#009688" />
@@ -73,7 +73,7 @@
     <Button
         android:layout_width="181dp"
         android:layout_height="69dp"
-        android:text="ADD TO CART"
+        android:text="ADD TO CAMPRET"
         android:id="@+id/addtocartButton"
         android:layout_gravity="center_horizontal"
         android:textSize="20dp"
