@@ -73,7 +73,7 @@
     <Button
         android:layout_width="181dp"
         android:layout_height="69dp"
-        android:text="ADD TO CART"
+        android:text="ANJING TO CART"
         android:id="@+id/addtocartButton"
         android:layout_gravity="center_horizontal"
         android:textSize="20dp"
