@@ -13,63 +13,55 @@
     tools:context=".UI.Register"
     tools:showIn="@layout/activity_register">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"/>
+
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etName"
         android:inputType="textPersonName"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        android:hint="Full Name"
+        android:textColor="#727272"
+        android:layout_marginTop="35dp"
+       />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Phone"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etPhone"
         android:inputType="phone"
+        android:hint="Phone"
+        android:textColor="#727272"
         android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etEmail"
         android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:textColor="#727272"
         android:layout_marginBottom="10dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"/>
+
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etPassword"
+        android:hint="Password"
+        android:textColor="#727272"
         android:layout_marginBottom="10dp"
         android:inputType="textPassword"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Repeat"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etRepeat"
+        android:hint="Repeat Password"
+        android:textColor="#727272"
         android:layout_marginBottom="10dp"
         android:inputType="textPassword"/>
 
@@ -77,6 +69,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bRegister"
-        android:text="Register"/>
+        android:text="Register"
+        android:background="#689F38"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal|bottom"/>
 
+    />
 </LinearLayout>

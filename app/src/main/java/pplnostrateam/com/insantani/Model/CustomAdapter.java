@@ -1,6 +1,5 @@
 package pplnostrateam.com.insantani.Model;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,55 +15,46 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import butterknife.Bind;
 import pplnostrateam.com.insantani.R;
 import pplnostrateam.com.insantani.UI.CartListFragment;
 
 /**
  * Created by Adrian on 3/15/2016.
  */
-public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
+public class CustomAdapter extends BaseAdapter {
 
     private Context context;
     private boolean useList = true;
     private List<Vegetable> items;
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextView;
 
-        public ViewHolder(TextView v) {
-            super(v);
-            mTextView = v;
-        }
-
-    }
-
-
-    public CustomAdapter(List<Vegetable> v) {
+    public CustomAdapter(Context context, List items) {
         this.context = context;
         this.items = items;
+        Log.d("items ",items.size()+"");
     }
 
-
-
-    @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+    /*
+     * Holder for the list items
+     */
+     private class ViewHolder {
+        RadioButton mRadioButton;
+        EditText mEditText;
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public int getCount() {
+        return items.size();
+    }
 
+    @Override
+    public Object getItem(int position) {
+        return items.get(position);
     }
 
     @Override
     public long getItemId(int position) {
         return position;
-    }
-
-    @Override
-    public int getItemCount() {
-        return 0;
     }
 
     /**
@@ -84,10 +74,9 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
 
         viewToUse = mInflater.inflate(R.layout.simple_list_item_3, null);
 
-        holder.etCartText = (EditText)viewToUse.findViewById(R.id.cartTitleTextView);
-        holder.bCartButton = (RadioButton)viewToUse.findViewById(R.id.cartRadioButton);
-        holder.bCartButton.setText(items.get(position).getName());
-
+        holder.mEditText = (EditText)viewToUse.findViewById(R.id.cartTitleTextView);
+        holder.mRadioButton = (RadioButton)viewToUse.findViewById(R.id.cartRadioButton);
+        holder.mRadioButton.setText(items.get(position).getName());
 
         return viewToUse;
     }

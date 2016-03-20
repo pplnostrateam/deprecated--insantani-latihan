@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,21 +20,27 @@
         android:layout_alignParentStart="true">
 
         <EditText
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/searchVegetableText"
-            android:layout_weight="95"
-            android:hint="Search...."
+            android:layout_weight="82.94"
+            android:hint="Search vegetables here"
+            android:padding="15dp"
             android:textSize="20dp"
-        />
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+
 
         <Button
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="go"
+            android:padding="15dp"
+            android:background="#689F38"
+            android:textColor="#FFFFFF"
             android:id="@+id/searchVegetableButton"
-            android:layout_weight="5" />
+            android:text="GO" />
     </LinearLayout>
 
     <LinearLayout
@@ -44,7 +49,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/linearLayout"
-        android:layout_alignParentLeft="true">
+        android:layout_alignParentLeft="true"
+        android:id="@+id/linearLayout3">
 
         <TextView
             android:layout_width="wrap_content"
@@ -52,17 +58,9 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Search Result"
             android:id="@+id/resultHeader"
-            android:textSize="33dp"
-            android:textColor="#009688" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="137dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
+            android:textSize="30dp"
+            android:textColor="#4CAF50"
+             />
     </LinearLayout>
 
     <TextView
@@ -70,94 +68,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/tvLoginLink"
         android:text="Login"
+        android:textColor="#009688"
         android:layout_gravity="center_horizontal"
         android:textStyle="bold"
         android:onClick="loginTextView"/>
 
 </RelativeLayout>
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="pplnostrateam.com.insantani.MainActivity">
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/searchTextView"
-            android:layout_weight="95"
-            android:hint="Search...."
-            android:textSize="20dp"
-            android:padding="10dp"
-            android:background="#FFFFFF"
-            android:text="Search vegetable..." />
-
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="go"
-            android:textColor="#FFFFFF"
-            android:textSize="20dp"
-            android:id="@+id/searchButton"
-            android:background="#303F9F"
-            android:layout_weight="5" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/linearLayout"
-        android:layout_alignParentLeft="true">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Search Result"
-            android:id="@+id/resultHeader"
-            android:textSize="33dp"
-            android:textColor="#009688" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="137dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
-
-    </LinearLayout>
-
-    <Button
-        android:layout_width="181dp"
-        android:layout_height="69dp"
-        android:text="ADD TO CART"
-        android:id="@+id/addtocartButton"
-        android:layout_gravity="center_horizontal"
-        android:textSize="20dp"
-        android:backgroundTint="#009688"
-        android:textColor="#ffffff"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
-</RelativeLayout>
->>>>>>> b354bb67f6326fcd45044d667e401fd81ef65039

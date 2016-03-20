@@ -13,46 +13,40 @@
     tools:context="pplnostrateam.com.insantani.UI.UserProfile"
     tools:showIn="@layout/activity_user_profile">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etName"
+        android:hint="Full Name"
         android:inputType="textPersonName"
         android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Phone"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etPhone"
         android:inputType="phone"
+        android:hint="Phone"
         android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etEmail"
         android:inputType="textEmailAddress"
+        android:hint="Email"
         android:layout_marginBottom="10dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bLogout"
-        android:text="Logout"/>
+        android:background="#689F38"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Logout"
+        android:layout_gravity="center_horizontal|bottom"/>
 
 </LinearLayout>
